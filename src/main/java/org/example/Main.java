@@ -1,17 +1,51 @@
 package org.example;
 
-//TIP Чтобы <b>запустить</b> код, нажмите <shortcut actionId="Run"/> или
-// нажмите на значок <icon src="AllIcons.Actions.Execute"/> в поле.
 public class Main {
     public static void main(String[] args) {
-        //TIP Нажмите <shortcut actionId="ShowIntentionActions"/>, когда курсор находится на выделенном тексте
-        // чтобы увидеть, как OpenIDE предлагает это исправить.
-        System.out.printf("Hello and welcome!");
+        // Первое задание
+        Person person1 = new Person();
+        person1.name = "Димасик";
+        person1.age = 33;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Нажмите <shortcut actionId="Debug"/>, чтобы начать отладку вашего кода. Мы установили одну <icon src="AllIcons.Debugger.Db_set_breakpoint"/> точку останова
-            // для вас, но вы всегда можете добавить больше, нажав <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Person person2 = new Person();
+        person2.name = "Костик";
+        person2.age = 61;
+
+        System.out.printf("Первый человек: имя = %s, возраст = %d%n", person1.name, person1.age);
+        System.out.printf("Второй человек: имя = %s, возраст = %d%n", person2.name, person2.age);
+
+
+        // Второе задание
+        Rectangle rect1 = new Rectangle();
+        rect1.setWidth(5.0);
+        rect1.setHeight(3.0);
+
+        Rectangle rect2 = new Rectangle();
+        rect2.setWidth(7.5);
+        rect2.setHeight(4.2);
+
+
+
+        rect1.printInfo();
+        rect2.printInfo();
+
+
+        //Третье задание
+        BankAccount account = new BankAccount();
+        account.deposit(500);
+        account.printBalance();
+        account.deposit(200);
+        account.withdraw(100);
+        account.withdraw(700);
+        account.printBalance();
+
+
+        SavingsAccount savings = new SavingsAccount();
+        savings.deposit(500);
+        savings.printBalance();
+        savings.deposit(150);
+        savings.withdraw(300);
+        savings.withdraw(260);
+        savings.printBalance();
     }
 }
