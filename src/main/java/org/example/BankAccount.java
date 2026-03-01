@@ -33,9 +33,6 @@ public class BankAccount {
         return accountBalance;
     }
 
-    protected void setBalance(int balance) {
-        this.accountBalance = balance;
-    }
 }
 
 class SavingsAccount extends BankAccount {
