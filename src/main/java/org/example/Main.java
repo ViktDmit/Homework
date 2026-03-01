@@ -14,7 +14,6 @@ public class Main {
         System.out.printf("Первый человек: имя = %s, возраст = %d%n", person1.name, person1.age);
         System.out.printf("Второй человек: имя = %s, возраст = %d%n", person2.name, person2.age);
 
-
         // Второе задание
         Rectangle rect1 = new Rectangle();
         rect1.setWidth(5.0);
@@ -24,11 +23,8 @@ public class Main {
         rect2.setWidth(7.5);
         rect2.setHeight(4.2);
 
-
-
         rect1.printInfo();
         rect2.printInfo();
-
 
         //Третье задание
         BankAccount account = new BankAccount();
@@ -39,7 +35,6 @@ public class Main {
         account.withdraw(700);
         account.printBalance();
 
-
         SavingsAccount savings = new SavingsAccount();
         savings.deposit(500);
         savings.printBalance();
@@ -47,5 +42,12 @@ public class Main {
         savings.withdraw(300);
         savings.withdraw(260);
         savings.printBalance();
+
+        //Четвертое задание
+        Calculator calc = new Calculator();
+
+        calc.multiply(5, 3);        // Вывод: 15
+        calc.multiply(2, 3.14);     // Вывод: 6.28
+        calc.multiply(1.5, 2.5);    // Вывод: 3.75
     }
 }
