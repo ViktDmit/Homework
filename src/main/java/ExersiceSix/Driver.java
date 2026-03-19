@@ -1,4 +1,4 @@
-package org.example;
+package ExersiceSix;
 
 public class Driver extends PersonDriver {
     private int drivingExperience;
@@ -13,7 +13,7 @@ public class Driver extends PersonDriver {
 
     @Override
     public String toString() {
-        return "Driver{" +
+        return "ExersiceSix.Driver{" +
                 "fullName='" + getFullName() + '\'' +
                 ", age=" + getAge() +
                 ", drivingExperience=" + drivingExperience +

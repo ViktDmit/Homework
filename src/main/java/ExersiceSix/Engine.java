@@ -1,4 +1,4 @@
-package org.example;
+package ExersiceSix;
 
 public class Engine {
     private int power;
@@ -22,7 +22,7 @@ public class Engine {
 
     @Override
     public String toString() {
-        return "Engine{" +
+        return "ExersiceSix.Engine{" +
                 "power=" + power +
                 ", company='" + company + '\'' +
                 '}';

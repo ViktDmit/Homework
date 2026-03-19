@@ -1,4 +1,4 @@
-package org.example;
+package ExersiceSix;
 
 public final class SportCar extends Car {
     private double maxSpeed;
@@ -13,7 +13,7 @@ public final class SportCar extends Car {
 
     @Override
     public String toString() {
-        return "SportCar{" +
+        return "ExersiceSix.SportCar{" +
                 "marka='" + getMarka() + '\'' +
                 ", carClass='" + getCarClass() + '\'' +
                 ", driver=" + getDriver() +

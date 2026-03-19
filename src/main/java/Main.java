@@ -1,4 +1,12 @@
-package org.example;
+import ExerciseFive.Aspirant;
+import ExerciseFive.Student;
+import ExerciseFour.Calculator;
+import ExerciseOne.Person;
+import ExerciseSeven.Phone;
+import ExerciseThree.BankAccount;
+import ExerciseThree.SavingsAccount;
+import ExerciseTwo.Rectangle;
+import ExersiceSix.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +22,8 @@ public class Main {
         System.out.printf("Первый человек: имя = %s, возраст = %d%n", person1.name, person1.age);
         System.out.printf("Второй человек: имя = %s, возраст = %d%n", person2.name, person2.age);
 
+        System.out.println();
+
         // Второе задание
         Rectangle rect1 = new Rectangle();
         rect1.setWidth(5.0);
@@ -25,6 +35,8 @@ public class Main {
 
         rect1.printInfo();
         rect2.printInfo();
+
+        System.out.println();
 
         //Третье задание
         BankAccount account = new BankAccount();
@@ -43,12 +55,16 @@ public class Main {
         savings.withdraw(260);
         savings.printBalance();
 
+        System.out.println();
+
         //Четвертое задание
         Calculator calc = new Calculator();
 
         calc.multiply(5, 3);
         calc.multiply(2, 3.14);
         calc.multiply(1.5, 2.5);
+
+        System.out.println();
 
         //Пятое задание
         Student student = new Student();
@@ -77,6 +93,8 @@ public class Main {
         System.out.println("Средняя оценка: " + aspirant.averageMark);
         System.out.println("Научная работа: " + aspirant.scientificWork);
         System.out.println("Стипендия: " + aspirant.getScholarship() + " руб.");
+        System.out.println();
+
         System.out.println();
 
         //Шестое задание
@@ -112,5 +130,68 @@ public class Main {
         sportCar.setEngine(engine);
         sportCar.setMaxSpeed(320.0);
         System.out.println(sportCar);
+
+        System.out.println();
+
+        //Седьмое задание
+        Phone phone1 = new Phone("123-45-67", "iPhone Z", 0.164);
+        Phone phone2 = new Phone("987-65-43", "Samsung S25", 0.169);
+
+        System.out.println("Информация о телефонах:");
+        System.out.println(phone1);
+        System.out.println(phone2);
+
+        System.out.println("\nТест 1: phone1 звонит phone2");
+        phone1.receiveCall(phone2);
+
+        System.out.println("\nТест 2: phone1 звонит сам себе");
+        phone1.receiveCall(phone1);
+
+        System.out.println();
+
+        //Восьмое задание
+        ExerciseEight.Person person3 = new ExerciseEight.Person();
+
+        ExerciseEight.Person person4 = new ExerciseEight.Person("Иван Петров", 25);
+
+        System.out.println("Объект person3 (конструктор по умолчанию):");
+        person3.move();
+        person3.talk();
+
+        System.out.println();
+
+        System.out.println("Объект person4 (параметризованный конструктор):");
+        person4.move();
+        person4.talk();
+
+        System.out.println();
+
+        //Девятое задание
+
+        ExerciceNine.Car car1 = new ExerciceNine.Car("Toyota Camry", 2022);
+
+        ExerciceNine.Car car2 = new ExerciceNine.Car(null, null);
+
+        System.out.println("Информация о первом автомобиле:");
+        System.out.println(car1.toString());
+
+        System.out.println();
+
+        System.out.println("Информация о втором автомобиле (с null в конструкторе):");
+        System.out.println(car2.toString());
+
+        System.out.println();
+
+        //Десятое задание
+
+        ExerciseTen.Rectangle rect3 = new ExerciseTen.Rectangle(5, 10);
+
+        ExerciseTen.Rectangle rect4 = new ExerciseTen.Rectangle(rect3);
+
+        System.out.println("Первый прямоугольник: " + rect3);
+        System.out.println("Второй прямоугольник (копия): " + rect4);
+
+        System.out.println("rect3 == rect4? " + (rect3 == rect4));
+        System.out.println("rect3.equals(rect4)? " + rect3.equals(rect4));
     }
 }

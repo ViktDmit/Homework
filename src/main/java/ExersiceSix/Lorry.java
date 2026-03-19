@@ -1,4 +1,4 @@
-package org.example;
+package ExersiceSix;
 
 public final class Lorry extends Car {
     private int carrying;
@@ -13,7 +13,7 @@ public final class Lorry extends Car {
 
     @Override
     public String toString() {
-        return "Lorry{" +
+        return "ExersiceSix.Lorry{" +
                 "marka='" + getMarka() + '\'' +
                 ", carClass='" + getCarClass() + '\'' +
                 ", driver=" + getDriver() +

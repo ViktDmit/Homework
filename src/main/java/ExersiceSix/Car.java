@@ -1,4 +1,4 @@
-package org.example;
+package ExersiceSix;
 
 public class Car {
     private String marka;
@@ -56,7 +56,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "ExersiceSix.Car{" +
                 "marka='" + marka + '\'' +
                 ", carClass='" + carClass + '\'' +
                 ", driver=" + driver +

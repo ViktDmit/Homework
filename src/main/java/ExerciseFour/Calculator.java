@@ -1,4 +1,4 @@
-package org.example;
+package ExerciseFour;
 
 public class Calculator {
 

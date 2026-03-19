@@ -1,4 +1,4 @@
-package org.example;
+package ExerciseOne;
 
 public class Person {
     public String name;

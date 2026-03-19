@@ -1,4 +1,4 @@
-package org.example;
+package ExersiceSix;
 
 public class PersonDriver {
     private String fullName;
@@ -22,7 +22,7 @@ public class PersonDriver {
 
     @Override
     public String toString() {
-        return "PersonDriver{" +
+        return "ExersiceSix.PersonDriver{" +
                 "fullName='" + fullName + '\'' +
                 ", age=" + age +
                 '}';
