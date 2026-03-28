@@ -7,6 +7,12 @@ import ExerciseThree.BankAccount;
 import ExerciseThree.SavingsAccount;
 import ExerciseTwo.Rectangle;
 import ExersiceSix.*;
+import FinalProject.*;
+import FinalProject.enumeration.*;
+import FinalProject.enumeration.Package;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
@@ -193,5 +199,92 @@ public class Main {
 
         System.out.println("rect3 == rect4? " + (rect3 == rect4));
         System.out.println("rect3.equals(rect4)? " + rect3.equals(rect4));
+
+        System.out.println();
+
+        //Финальное задание
+        // 1. Пользователь
+        User user = new User();
+        user.setName("Вася");
+        user.setLastName("Пупкин");
+        user.setPhone("+7 123 456-78-90");
+        user.setMail("VasyaPupkin@rt.com");
+        user.setLogin("VasyaPupkin");
+        user.setPassword("MoshniiParol");
+        user.setRole(Role.CUSTOMER);
+
+        // 2. Адрес
+        Address address = new Address();
+        address.setCountry(Country.RUSSIA);
+        address.setRegion("Московская область");
+        address.setCity("Москва");
+        address.setStreet("Тверская");
+        address.setHouse("15");
+        address.setAppartment("42");
+        address.setIndex("123456");
+
+        // 3. Напитки
+        Coffee coffee = new Coffee();
+        coffee.setName("Lavazza Qualita Oro");
+        coffee.setPrice(BigDecimal.valueOf(750.00));
+        coffee.setWeight(0.25f);
+        coffee.setManufacturer(Manufacturer.LAVAZZA);
+        coffee.setCountry(Country.ITALY);
+        coffee.setaPackage(Package.TETRAPAK);
+        coffee.setCoffeeType(CoffeeType.GROUND);
+        coffee.setRoasting(Roasting.MEDIUM_ROAST);
+
+        Tea tea = new Tea();
+        tea.setName("Иван-Чай");
+        tea.setPrice(BigDecimal.valueOf(200.00));
+        tea.setWeight(0.25f);
+        tea.setManufacturer(Manufacturer.ZOLOTAIA_CHASHA);
+        tea.setCountry(Country.RUSSIA);
+        tea.setaPackage(Package.CARDBOARD);
+        tea.setTeaType(TeaType.IVAN_CHAI_GOIDA);
+        tea.setAroma(Aroma.FLOWER);
+
+        // 4. Корзина
+        CartItem coffeeItem = new CartItem();
+        coffeeItem.setDrink(coffee);
+        coffeeItem.setCount((short) 2);
+
+        CartItem teaItem = new CartItem();
+        teaItem.setDrink(tea);
+        teaItem.setCount((short) 1);
+
+        CartItem[] cartItems = {coffeeItem, teaItem};
+
+        // 5. Заказ
+        Order order = new Order();
+        order.setOrderDate(LocalDateTime.now());
+        order.setUser(user);
+        order.setAddress(address);
+        order.setStatus(Status.NEW);
+
+        BigDecimal total = BigDecimal.ZERO;
+        for (CartItem item : cartItems) {
+            BigDecimal itemPrice = item.getDrink().getPrice().multiply(BigDecimal.valueOf(item.getCount()));
+            total = total.add(itemPrice);
+        }
+        order.setTotalPrice(total);
+        order.setCartItemArray(cartItems);
+
+        // 6. Вывод информации
+        System.out.println("=== Информация о заказе ===");
+        System.out.println("Дата: " + order.getOrderDate());
+        System.out.println("Покупатель: " + order.getUser().getName() + " " + order.getUser().getLastName());
+        System.out.println("Адрес: " + order.getAddress().getCountry() + ", " +
+                order.getAddress().getCity() + ", " + order.getAddress().getStreet() + " " +
+                order.getAddress().getHouse() + ", кв. " + order.getAddress().getAppartment());
+        System.out.println("Статус: " + order.getStatus());
+        System.out.println("Состав заказа:");
+        for (CartItem item : order.getCartItemArray()) {
+            System.out.printf("  - %s x%d = %.2f руб.%n",
+                    item.getDrink().getName(),
+                    item.getCount(),
+                    item.getDrink().getPrice().doubleValue() * item.getCount());
+        }
+        System.out.printf("Итого: %.2f руб.%n", order.getTotalPrice().doubleValue());
     }
 }
