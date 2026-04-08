@@ -1,22 +1,23 @@
 package ExersiceSix;
 
 public class Driver extends PersonDriver {
-    private int drivingExperience;
 
-    public int getDrivingExperience() {
-        return drivingExperience;
-    }
+  private int drivingExperience;
 
-    public void setDrivingExperience(int drivingExperience) {
-        this.drivingExperience = drivingExperience;
-    }
+  public int getDrivingExperience() {
+    return drivingExperience;
+  }
 
-    @Override
-    public String toString() {
-        return "ExersiceSix.Driver{" +
-                "fullName='" + getFullName() + '\'' +
-                ", age=" + getAge() +
-                ", drivingExperience=" + drivingExperience +
-                '}';
-    }
+  public void setDrivingExperience(int drivingExperience) {
+    this.drivingExperience = drivingExperience;
+  }
+
+  @Override
+  public String toString() {
+    return "ExersiceSix.Driver{" +
+        "fullName='" + getFullName() + '\'' +
+        ", age=" + getAge() +
+        ", drivingExperience=" + drivingExperience +
+        '}';
+  }
 }

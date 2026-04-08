@@ -1,36 +1,37 @@
 package ExerciseTwo;
 
 public class Rectangle {
-    private double width;
-    private double height;
 
-    public double getHeight() {
-        return height;
-    }
+  private double width;
+  private double height;
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
+  public double getHeight() {
+    return height;
+  }
 
-    public double getWidth() {
-        return width;
-    }
+  public void setHeight(double height) {
+    this.height = height;
+  }
 
-    public void setWidth(double width) {
-        this.width = width;
-    }
+  public double getWidth() {
+    return width;
+  }
 
-    public double getArea() {
-        return width * height;
-    }
+  public void setWidth(double width) {
+    this.width = width;
+  }
 
-    public double getPerimeter() {
-        return 2 * (width + height);
-    }
+  public double getArea() {
+    return width * height;
+  }
 
-    public void printInfo() {
-        System.out.printf("Ширина: %.2f, Высота: %.2f, Площадь: %.2f, Периметр: %.2f%n",
-                width, height, getArea(), getPerimeter());
-    }
+  public double getPerimeter() {
+    return 2 * (width + height);
+  }
+
+  public void printInfo() {
+    System.out.printf("Ширина: %.2f, Высота: %.2f, Площадь: %.2f, Периметр: %.2f%n",
+        width, height, getArea(), getPerimeter());
+  }
 }
 
