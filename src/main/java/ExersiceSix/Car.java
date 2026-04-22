@@ -1,66 +1,67 @@
 package ExersiceSix;
 
 public class Car {
-    private String marka;
-    private String carClass;
-    private Driver driver;
-    private Engine engine;
 
-    public String getMarka() {
-        return marka;
-    }
+  private String marka;
+  private String carClass;
+  private Driver driver;
+  private Engine engine;
 
-    public void setMarka(String marka) {
-        this.marka = marka;
-    }
+  public String getMarka() {
+    return marka;
+  }
 
-    public String getCarClass() {
-        return carClass;
-    }
+  public void setMarka(String marka) {
+    this.marka = marka;
+  }
 
-    public void setCarClass(String carClass) {
-        this.carClass = carClass;
-    }
+  public String getCarClass() {
+    return carClass;
+  }
 
-    public Driver getDriver() {
-        return driver;
-    }
+  public void setCarClass(String carClass) {
+    this.carClass = carClass;
+  }
 
-    public void setDriver(Driver driver) {
-        this.driver = driver;
-    }
+  public Driver getDriver() {
+    return driver;
+  }
 
-    public Engine getEngine() {
-        return engine;
-    }
+  public void setDriver(Driver driver) {
+    this.driver = driver;
+  }
 
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
+  public Engine getEngine() {
+    return engine;
+  }
 
-    public void start() {
-        System.out.println("Поехали");
-    }
+  public void setEngine(Engine engine) {
+    this.engine = engine;
+  }
 
-    public void stop() {
-        System.out.println("Останавливаемся");
-    }
+  public void start() {
+    System.out.println("Поехали");
+  }
 
-    public void turnRight() {
-        System.out.println("Поворот направо");
-    }
+  public void stop() {
+    System.out.println("Останавливаемся");
+  }
 
-    public void turnLeft() {
-        System.out.println("Поворот налево");
-    }
+  public void turnRight() {
+    System.out.println("Поворот направо");
+  }
 
-    @Override
-    public String toString() {
-        return "ExersiceSix.Car{" +
-                "marka='" + marka + '\'' +
-                ", carClass='" + carClass + '\'' +
-                ", driver=" + driver +
-                ", engine=" + engine +
-                '}';
-    }
+  public void turnLeft() {
+    System.out.println("Поворот налево");
+  }
+
+  @Override
+  public String toString() {
+    return "ExersiceSix.Car{" +
+        "marka='" + marka + '\'' +
+        ", carClass='" + carClass + '\'' +
+        ", driver=" + driver +
+        ", engine=" + engine +
+        '}';
+  }
 }

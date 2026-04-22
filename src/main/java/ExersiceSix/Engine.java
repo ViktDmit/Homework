@@ -1,30 +1,31 @@
 package ExersiceSix;
 
 public class Engine {
-    private int power;
-    private String company;
 
-    public int getPower() {
-        return power;
-    }
+  private int power;
+  private String company;
 
-    public void setPower(int power) {
-        this.power = power;
-    }
+  public int getPower() {
+    return power;
+  }
 
-    public String getCompany() {
-        return company;
-    }
+  public void setPower(int power) {
+    this.power = power;
+  }
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
+  public String getCompany() {
+    return company;
+  }
 
-    @Override
-    public String toString() {
-        return "ExersiceSix.Engine{" +
-                "power=" + power +
-                ", company='" + company + '\'' +
-                '}';
-    }
+  public void setCompany(String company) {
+    this.company = company;
+  }
+
+  @Override
+  public String toString() {
+    return "ExersiceSix.Engine{" +
+        "power=" + power +
+        ", company='" + company + '\'' +
+        '}';
+  }
 }

@@ -2,75 +2,58 @@ package FinalProject;
 
 import FinalProject.enumeration.Country;
 
-public class Address {
+public final class Address {
 
-    private Country country;
+  private final Country country;
 
-    private String region;
+  private final String region;
 
-    private String city;
+  private final String city;
 
-    private String street;
+  private final String street;
 
-    private String house;
+  private final String house;
 
-    private String appartment;
+  private final String appartment;
 
-    private String index;
+  private final String index;
 
-    public Country getCountry() {
-        return country;
-    }
+  public Address(Country country, String region, String city, String street,
+      String house, String appartment, String index) {
+    this.country = country;
+    this.region = region;
+    this.city = city;
+    this.street = street;
+    this.house = house;
+    this.appartment = appartment;
+    this.index = index;
+  }
 
-    public void setCountry(Country country) {
-        this.country = country;
-    }
+  public Country getCountry() {
+    return country;
+  }
 
-    public String getRegion() {
-        return region;
-    }
+  public String getRegion() {
+    return region;
+  }
 
-    public void setRegion(String region) {
-        this.region = region;
-    }
+  public String getCity() {
+    return city;
+  }
 
-    public String getCity() {
-        return city;
-    }
+  public String getStreet() {
+    return street;
+  }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+  public String getHouse() {
+    return house;
+  }
 
-    public String getStreet() {
-        return street;
-    }
+  public String getAppartment() {
+    return appartment;
+  }
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public String getHouse() {
-        return house;
-    }
-
-    public void setHouse(String house) {
-        this.house = house;
-    }
-
-    public String getAppartment() {
-        return appartment;
-    }
-
-    public void setAppartment(String appartment) {
-        this.appartment = appartment;
-    }
-
-    public String getIndex() {
-        return index;
-    }
-
-    public void setIndex(String index) {
-        this.index = index;
-    }
+  public String getIndex() {
+    return index;
+  }
 }

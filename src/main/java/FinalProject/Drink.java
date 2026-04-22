@@ -3,68 +3,55 @@ package FinalProject;
 import FinalProject.enumeration.Country;
 import FinalProject.enumeration.Manufacturer;
 import FinalProject.enumeration.Package;
-
 import java.math.BigDecimal;
 
 public abstract class Drink {
 
-    private String name;
+  private final String name;
 
-    private BigDecimal price;
+  private final BigDecimal price;
 
-    private Float weight;
+  private final Float weight;
 
-    private Manufacturer manufacturer;
+  private final Manufacturer manufacturer;
 
-    private Country country;
+  private final Country country;
 
-    private Package aPackage;
+  private final Package Package;
 
-    public String getName() {
-        return name;
-    }
+  protected Drink(String name, BigDecimal price, Float weight,
+      Manufacturer manufacturer, Country country, Package Package) {
+    this.name = name;
+    this.price = price;
+    this.weight = weight;
+    this.manufacturer = manufacturer;
+    this.country = country;
+    this.Package = Package;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+  public BigDecimal getPrice() {
+    return price;
+  }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+  public Float getWeight() {
+    return weight;
+  }
 
-    public Float getWeight() {
-        return weight;
-    }
+  public Manufacturer getManufacturer() {
+    return manufacturer;
+  }
 
-    public void setWeight(Float weight) {
-        this.weight = weight;
-    }
+  public Country getCountry() {
+    return country;
+  }
 
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
+  public Package getaPackage() {
+    return Package;
+  }
 
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
-    }
 
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
-    public Package getaPackage() {
-        return aPackage;
-    }
-
-    public void setaPackage(Package aPackage) {
-        this.aPackage = aPackage;
-    }
 }

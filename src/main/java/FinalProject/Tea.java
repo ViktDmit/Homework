@@ -1,27 +1,33 @@
 package FinalProject;
 
 import FinalProject.enumeration.Aroma;
+import FinalProject.enumeration.Country;
+import FinalProject.enumeration.Manufacturer;
 import FinalProject.enumeration.TeaType;
+import java.math.BigDecimal;
 
-public class Tea extends Drink {
+public final class Tea extends Drink {
 
-    private TeaType teaType;
+  private final TeaType teaType;
 
-    private Aroma aroma;
+  private final Aroma aroma;
 
-    public TeaType getTeaType() {
-        return teaType;
-    }
+  public Tea(String name, BigDecimal price, Float weight,
+      Manufacturer manufacturer, Country country,
+      FinalProject.enumeration.Package Package, TeaType teaType, Aroma aroma) {
+    super(name, price, weight, manufacturer, country, Package);
+    this.teaType = teaType;
+    this.aroma = aroma;
+  }
 
-    public void setTeaType(TeaType teaType) {
-        this.teaType = teaType;
-    }
+  public TeaType getTeaType() {
+    return teaType;
+  }
 
-    public Aroma getAroma() {
-        return aroma;
-    }
 
-    public void setAroma(Aroma aroma) {
-        this.aroma = aroma;
-    }
+  public Aroma getAroma() {
+    return aroma;
+  }
+
+
 }

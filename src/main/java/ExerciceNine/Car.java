@@ -1,26 +1,27 @@
 package ExerciceNine;
 
 public class Car {
-    private String model;
-    private Integer year;
 
-    public Car(String model, Integer year) {
+  private final String model;
+  private final Integer year;
 
-        this.model = (model != null) ? model : "Unknown";
+  public Car(String model, Integer year) {
 
-        this.year = (year != null) ? year : 0;
-    }
+    this.model = (model != null) ? model : "Unknown";
 
-    public String getModel() {
-        return model;
-    }
+    this.year = (year != null) ? year : 0;
+  }
 
-    public Integer getYear() {
-        return year;
-    }
+  public String getModel() {
+    return model;
+  }
 
-    @Override
-    public String toString() {
-        return "Car{model='" + model + "', year=" + year + "}";
-    }
+  public Integer getYear() {
+    return year;
+  }
+
+  @Override
+  public String toString() {
+    return "Car{model='" + model + "', year=" + year + "}";
+  }
 }
